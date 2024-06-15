@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".scrap.ScrappingActivity"
+    android:id="@+id/main"
+    android:background="@color/gray100">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/orange">
+
+        <ImageButton
+            android:id="@+id/hamburger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hamburger"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="20dp"
+            android:background="@color/orange"
+            />
+
+        <TextView
+            android:id="@+id/bs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCRAPPING VIEW"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_below="@id/action_bar"
+        android:background="@drawable/search_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="0dp"
+        android:hint="Search"
+        android:textColorHint="@color/white"
+        android:paddingStart="20dp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:drawableRight="@drawable/search_icon"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxEms="1"
+        />
+    <ImageButton
+        android:id="@+id/filter"
+        android:layout_below="@id/action_bar"
+        android:background="@drawable/search_input"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:elevation="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/search_bar"
+        android:src="@drawable/filter_icon"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/search_menu"
+        android:layout_below="@id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        tools:listitem="@layout/menu_item"
+        android:layout_margin="10dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_below="@+id/search_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item"
+        android:background="@color/gray100"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        />
+
+
+</RelativeLayout>

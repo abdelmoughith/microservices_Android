@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.ProductViewer"
+
+    android:background="@color/gray200">
+    <ImageView
+        android:id="@+id/images_preview"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        tools:listitem="@layout/item2"
+        android:layout_centerHorizontal="true"
+        android:src="@raw/ring"
+        android:elevation="0dp"/>
+
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_below="@+id/images_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@drawable/topradius"
+        android:layout_alignParentBottom="true"
+        android:elevation="1dp"
+        >
+        <TextView
+            android:id="@+id/title"
+            android:text="Iphone 14 pro max"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/description"
+            android:layout_below="@+id/title"
+            android:text="An apple mobile which is nothing like apple An apple mobile which is nothing like apple"
+            android:ems="30"
+            android:lines="4"
+            android:textSize="10.5sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/discountPercentage"
+            android:layout_below="@+id/description"
+            android:text="discountPercentage : 34"
+            android:textStyle="bold"
+            android:ems="10"
+            android:textSize="12sp"
+            android:textColor="@color/gray2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/rating"
+            android:layout_below="@+id/discountPercentage"
+            android:text="rating : 34"
+            android:textStyle="bold"
+            android:ems="10"
+            android:textSize="12sp"
+            android:textColor="@color/gray2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/stock"
+            android:layout_below="@+id/rating"
+            android:text="Stock : 34"
+            android:textStyle="bold"
+            android:ems="10"
+            android:textSize="12sp"
+            android:textColor="@color/gray2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/brand"
+            android:layout_below="@+id/stock"
+            android:text="brand : 34"
+            android:textStyle="bold"
+            android:ems="10"
+            android:textSize="12sp"
+            android:textColor="@color/gray2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/category"
+            android:layout_below="@+id/brand"
+            android:text="category : 34"
+            android:textStyle="bold"
+            android:ems="10"
+            android:textSize="12sp"
+            android:textColor="@color/gray2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/price"
+            android:layout_below="@id/category"
+            android:text="1299 $"
+            android:ems="6"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:id="@+id/numberWant"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/price"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/counter">
+
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/counterminus"/>
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@id/btnMinus"
+                android:layout_centerVertical="true"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/counterplus"/>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/add_to_cart"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:text="Add to cart"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/cart_vector"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/inputbutton"
+            />
+        <ImageButton
+            android:id="@+id/like"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/counter"
+            android:src="@drawable/ic_heart"
+            app:tint="@color/orangedarker"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

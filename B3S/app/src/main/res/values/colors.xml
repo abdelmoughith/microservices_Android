@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#ED761C</color>
+    <color name="orangedarker">#BA5D18</color>
+    <color name="gray">#CDCDCD</color>
+    <color name="gray2">#979797</color>
+    <color name="grayinput">#e1e1e1</color>
+
+    <!-- Additional colors for a cohesive theme -->
+    <color name="light_orange">#FFC947</color>
+    <color name="dark_orange">#E65100</color>
+
+
+
+
+    <!-- Gray colors -->
+    <color name="gray100">#F5F5F5</color>
+    <color name="gray200">#EEEEEE</color>
+    <color name="gray300">#E0E0E0</color>
+    <color name="gray400">#BDBDBD</color>
+    <color name="gray500">#9E9E9E</color>
+    <color name="gray600">#757575</color>
+    <color name="gray700">#616161</color>
+    <color name="gray800">#424242</color>
+    <color name="gray900">#212121</color>
+
+    <!-- Error color -->
+    <color name="red">#B00020</color>
+</resources>
